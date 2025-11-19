@@ -25,6 +25,43 @@
 Настройки: черный цвет фона и серые буквы. Окно должно вмещать 80 символов в ширину.
 Вызов терминала по hotkey.
 
+#### Настройка терминала в Debian LXDE
+
+1. Hotkey
+
+```text
+Параметры -> Настроить горячие клавиши
+```
+
+Для запуска lxterminal настроил Super+Z
+
+2. Чтобы терминал запускался на весь экран
+
+Файл `.config/openbox/lxde-rc.xml`.
+Вместо:
+
+```xml
+<applications/>
+```
+
+Добавил секцию :
+
+```xml
+<applications>
+    <application name='lxterminal'>
+        <maximized>yes</maximized>
+    </application>
+</applications>
+```
+
+Я выбрал:
+
+* Терминал LXTerminal (в LXDE)
+* Шрифт Monospace Regular 14
+* Тема Solarized Light
+
+### ПО (продолжение)
+
 Остальные программы: браузер (автор использует palemoon), LibreOffice, atril (pdf reader),
 eog (просмотр изображений), mplayer, vlc.
 
@@ -34,7 +71,12 @@ eog (просмотр изображений), mplayer, vlc.
 * joe
 * nano
 
-#### Для программирования
+У меня вместо:
+
+* `atril` стоит `Okular`
+* `eog` стоит `gpicview`
+
+### Для программирования
 
 * Компилятор Free Pascal - `fpc` или `fp-compiler`. Интегрированную среду не ставить.
 * Ассемблер NASM - `nasm`.
@@ -47,7 +89,6 @@ eog (просмотр изображений), mplayer, vlc.
 Переключение на текстовую консоль - Ctrl+Alt+F1.
 
 Переключение в оболочку X Window - Alt-F7, Alt-F8, Alt-F9.
-
 
 * `~` - домашний каталог пользователя
 * `$` - работа происходит под простым пользователем
